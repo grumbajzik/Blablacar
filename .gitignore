@@ -29,6 +29,6 @@ build/
 !**/src/test/**/build/
 
 ### Environment & Secrets ###
-.env
+# .env (included for development/testing as requested)
 .env.local
 *.log
