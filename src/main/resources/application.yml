@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spolujizda-backend
+
+  datasource:
+    url: jdbc:postgresql://ep-patient-sunset-bam25ikj-pooler.c-8.eu-central-1.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_FZapRALgm86O
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      idle-timeout: 300000
+      max-lifetime: 600000
+      connection-timeout: 30000
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate # Validuje model proti sdílené Neon DB, nemění schéma
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+# Konfigurace doménových agentů a externích integrací
+app:
+  agents:
+    routing:
+      osrm-base-url: ${OSRM_BASE_URL:http://router.project-osrm.org}
+      max-detour-minutes: 5
+      corridor-buffer-meters: 500
+    weather:
+      open-meteo-base-url: ${OPEN_METEO_BASE_URL:https://api.open-meteo.com/v1}
+      check-interval-cron: "0 */15 * * * *"
+      adverse-rain-threshold-mm: 1.0
+
+# Swagger / OpenAPI konfigurace
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
