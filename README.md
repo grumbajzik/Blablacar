@@ -1,6 +1,6 @@
-# SpolujízdaNaPožádání (pracovní název)
+# SpolujízdaNaPožádání
 
-> Zadání projektu EBC-WAB, 1. část. Tým: *(doplnit jména)*
+> Zadání projektu WAB, xjezek, xhvozdov, xboba
 
 Bezplatná komunitní spolujízda „na požádání“: řidič, který už jede, nabídne volná místa, a někdo, kdo potřebuje jet stejným směrem v nejbližší hodině, se k němu připojí jedním klikem. Bez plateb, jen sdílení cesty, s důrazem na bezpečnost.
 
@@ -19,7 +19,7 @@ Bezplatná komunitní spolujízda „na požádání“: řidič, který už jed
 | Řidič | Jezdí sám, auto je poloprázdné | Vzít cestou někoho bez zajížďky a bez starostí |
 | Spolucestující | Čeká na MHD, platí taxi, nebo se ptá známých | Rychle se dostat z A do B, bezpečně a zdarma |
 
-**Pro koho v prvním nasazení.** Jedna uzavřená komunita (např. studenti a zaměstnanci jedné školy) a jedna typická trasa. Tím řešíme problém „prázdného marketplace“ a zjednodušujeme ověřování.
+**Pro koho v prvním nasazení.** Jedna uzavřená komunita (např. studenti a zaměstnanci Mendelu) a jedna typická trasa. Tím řešíme problém „prázdného marketplace“ a zjednodušujeme ověřování.
 
 ## 2. Hlavní scénáře
 
@@ -155,4 +155,4 @@ erDiagram
 
 ## 7. Agenti a AI rozšíření
 
-Detailní specifikaci chytrých doménových agentů a pokyny pro vývoj najdete v souboru [AGENTS.md](file:///d:/Blablacar/AGENTS.md).
+Detailní specifikaci chytrých doménových agentů a pokyny pro vývoj najdete v souboru [AGENTS.md](AGENTS.md).
