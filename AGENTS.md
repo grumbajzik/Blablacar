@@ -13,10 +13,10 @@ Dokument definuje:
 
 ## 1. Architektonický přehled a technologický stack
 
-Projekt je koncipován jako backendová služba v **Java 21 / Spring Boot 3.x** s důrazem na čistou vrstvenou architekturu, asynchronní zpracování událostí a geoprostorové výpočty.
+Projekt je koncipován jako backendová služba v **Java 25 / Spring Boot 3.x** s důrazem na čistou vrstvenou architekturu, asynchronní zpracování událostí a geoprostorové výpočty.
 
 ### Technologický stack:
-- **Jazyk & Platforma:** Java 21 (LTS), Spring Boot 3.3+
+- **Jazyk & Platforma:** Java 25 (LTS), Spring Boot 3.3+
 - **Databáze:** Neon Serverless PostgreSQL 16 + rozšíření **PostGIS** (sdílená cloudová databáze pro tým, databázový branching, geometrie, koridory, prostorové indexy `GIST`)
 - **Cache & Real-time:** Redis 7 (živá poloha, rate-limiting, pub/sub pro WebSockety)
 - **Migrace schématu:** Flyway (verzování sdíleného datového modelu)
